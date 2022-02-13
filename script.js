@@ -18,7 +18,6 @@ fetch(`https://api.itbook.store/1.0/search/${userinput}/${whatPage}`)
     })
     .then((data) => {
         console.log(data);
-        console.log("ligma")
         const html = data.books
         .map((data) => {
             return  `
