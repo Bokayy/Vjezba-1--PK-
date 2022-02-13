@@ -1,0 +1,155 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+* {
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+}
+
+body {
+  background-color: black;
+}
+
+body header {
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body header h1 {
+  color: white;
+  font-size: 5rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-top: 3rem;
+  margin-left: 4rem;
+  margin-bottom: 1rem;
+}
+
+body header .pageIndicator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 2rem;
+}
+
+body header .pageIndicator .fa-solid {
+  font-size: 5rem;
+  cursor: pointer;
+}
+
+body header .pageIndicator .pageNo {
+  font-size: 3rem;
+}
+
+body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body main #api {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 100vw;
+}
+
+body main #api .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 3rem;
+  border: 1px solid #eee;
+  margin: 1rem;
+  max-width: 50rem;
+}
+
+body main #api .item .title {
+  margin-top: 3rem;
+}
+
+body main #api .item .title p {
+  font-size: 2rem;
+}
+
+.divider {
+  background-color: yellow;
+  min-width: 100%;
+  min-height: 1.5rem;
+}
+
+.search {
+  width: 100%;
+  /* position: relative; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid yellow;
+  border-right: none;
+  padding: 5px;
+  height: 3.6rem;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+  font-size: 2rem;
+}
+
+.searchTerm:focus {
+  color: black;
+}
+
+.searchButton {
+  width: 4rem;
+  height: 3.6rem;
+  border: 1px solid yellow;
+  background: yellow;
+  text-align: center;
+  color: black;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 3rem;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap {
+  width: 30%;
+  position: absolute;
+  top: 4%;
+  left: 80%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+/*# sourceMappingURL=style.css.map */
