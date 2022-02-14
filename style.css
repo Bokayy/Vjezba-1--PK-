@@ -172,10 +172,15 @@ body main #api .item .title p {
           transform: translate(-50%, -50%);
 }
 
-@media screen and (max-width: 1730px) {
-  .break {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+@media screen and (max-width: 940px) {
+  header {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
   }
+  /*       .break{
+          flex-basis: 100% !important;
+      } */
 }
 /*# sourceMappingURL=style.css.map */

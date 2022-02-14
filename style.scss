@@ -135,8 +135,11 @@ body{
     transform: translate(-50%, -50%);
   }
 
-  @media screen and (max-width:1730px) {
-      .break{
-          flex-basis: 100%;
+  @media screen and (max-width:940px) {
+      header{
+          flex-direction: column !important;
       }
+/*       .break{
+          flex-basis: 100% !important;
+      } */
   }
