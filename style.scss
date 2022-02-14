@@ -1,11 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 *{
-    font-size: 62.5%;
     margin: 0 ;
     padding: 0;
     box-sizing: border-box;
     color: #fff;
+}
+
+html{
+    font-size: 62.5%;
 }
 
 i{
@@ -78,6 +81,13 @@ body{
                 margin: 1rem;
                 max-width: 50rem;
 
+
+                @media screen and (max-width:940px){
+                    p > img{
+                        height: 20rem;
+                    }
+                }
+
                 .title{
                     margin-top:3rem;
                     p{
@@ -136,7 +146,25 @@ body{
   }
 
   @media screen and (max-width:940px) {
+      html{
+          font-size:40% !important;
+      }
       header{
           flex-direction: column !important;
+      }
+      .wrap{
+          top:12.5%;
+          width:45%;
+          left:68%;
+      }
+      #api{
+          max-width:10rem;
+      }
+  }
+
+  @media  screen and (max-width: 315px){
+      .wrap{
+          width: 30%;
+          left: 75%;
       }
   }
