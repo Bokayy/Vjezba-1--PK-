@@ -179,8 +179,5 @@ body main #api .item .title p {
         -ms-flex-direction: column !important;
             flex-direction: column !important;
   }
-  /*       .break{
-          flex-basis: 100% !important;
-      } */
 }
 /*# sourceMappingURL=style.css.map */
