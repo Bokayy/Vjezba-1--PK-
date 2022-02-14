@@ -8,6 +8,10 @@
   color: #fff;
 }
 
+i {
+  color: black;
+}
+
 body {
   background-color: black;
 }
@@ -63,6 +67,12 @@ body header .pageIndicator .pageNo {
   font-size: 3rem;
 }
 
+body .divider {
+  background-color: yellow;
+  min-width: 100%;
+  min-height: 1.5rem;
+}
+
 body main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -105,12 +115,6 @@ body main #api .item .title {
 
 body main #api .item .title p {
   font-size: 2rem;
-}
-
-.divider {
-  background-color: yellow;
-  min-width: 100%;
-  min-height: 1.5rem;
 }
 
 .search {

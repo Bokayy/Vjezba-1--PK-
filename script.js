@@ -60,6 +60,16 @@ btn.onclick = () => {
     fetchData(inputField.value);
 }
 
+inputField.addEventListener("keyup",function(e) {
+    console.log(inputField.value);
+    console.log(e.keyCode);
+    if(e.keyCode === 13)
+    {
+        console.log("enter");
+        fetchData(inputField.value);
+    }
+});
+
 pagePlus.onclick = () => {
     page++;
     pageNo.innerHTML = `Page: ${page}`

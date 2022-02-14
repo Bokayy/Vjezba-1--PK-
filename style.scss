@@ -8,6 +8,10 @@
     color: #fff;
 }
 
+i{
+    color: black;
+}
+
 body{
     background-color: black;
 
@@ -43,7 +47,11 @@ body{
 
         }
     }
-
+    .divider{
+        background-color:yellow;
+        min-width: 100%;
+        min-height: 1.5rem;
+    }
     main{
         display: flex;
         #api{
@@ -73,11 +81,6 @@ body{
 
 }
 
-.divider{
-    background-color:yellow;
-    min-width: 100%;
-    min-height: 1.5rem;
-}
 
 .search {
     width: 100%;
