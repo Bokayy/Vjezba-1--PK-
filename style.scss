@@ -11,6 +11,10 @@ html{
     font-size: 62.5%;
 }
 
+body{
+    max-width: 100%;
+}
+
 i{
     color: black;
 }
@@ -26,6 +30,8 @@ body{
         align-items: left;
         display: flex;
         flex-direction: row;
+        max-height: 10rem;
+        max-width: 100%;
         h1{
             color: white;
             font-size:5rem;
@@ -44,6 +50,7 @@ body{
             flex-direction: row;
             align-items: center;
             margin-left:2rem;
+            margin-top: 2rem;
             font-family: 'Courier New', Courier, monospace;
             .fa-solid{
                 font-size:5rem;
@@ -57,6 +64,28 @@ body{
                 font-size:3rem;
             }
 
+        }
+        .search{
+            .wrap{
+                margin-top: 3rem;
+                margin-left:1rem;
+            }
+
+            input{
+                border: 3px solid yellow;
+                border-top-left-radius:3px;
+                border-bottom-left-radius:3px;
+                height:4rem;
+            }
+            button{
+                border: 3px solid yellow;
+                margin-left: -0.3rem;
+                background-color: yellow;
+                border-top-right-radius: 3px;
+                border-bottom-right-radius:3px ;
+                height: 4rem;
+                width: 4rem;
+            }
         }
     }
     .divider{
@@ -101,50 +130,6 @@ body{
 }
 
 
-.search {
-    width: 100%;
-    /* position: relative; */
-    display: flex;
-  }
-  
-  .searchTerm {
-    width: 100%;
-    border: 3px solid yellow;
-    border-right: none;
-    padding: 5px;
-    height: 3.6rem;
-    border-radius: 5px 0 0 5px;
-    outline: none;
-    color: #9DBFAF;
-
-    font-size: 2rem;
-  }
-  
-  .searchTerm:focus{
-    color: black;
-  }
-  
-  .searchButton {
-    width: 4rem;
-    height: 3.6rem;
-    border: 1px solid yellow;
-    background: yellow;
-    text-align: center;
-    color: black;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    font-size: 3rem;
-  }
-  
-  /*Resize the wrap to see the search bar change!*/
-  .wrap{
-    width: 30%;
-    position: absolute;
-    top: 4%;
-    left: 80%;
-    transform: translate(-50%, -50%);
-  }
-
   @media screen and (max-width:940px) {
       html{
           font-size:40% !important;
@@ -152,19 +137,8 @@ body{
       header{
           flex-direction: column !important;
       }
-      .wrap{
-          top:12.5%;
-          width:45%;
-          left:68%;
-      }
       #api{
           max-width:10rem;
       }
   }
 
-  @media  screen and (max-width: 315px){
-      .wrap{
-          width: 30%;
-          left: 75%;
-      }
-  }
