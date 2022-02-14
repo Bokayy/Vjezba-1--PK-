@@ -23,6 +23,11 @@ body{
             margin-left:4rem;
             margin-bottom: 1rem;
         }
+        .break{
+            flex-basis:0;
+            width: 0%;
+        }
+
         .pageIndicator{
             display: flex;
             flex-direction: row;
@@ -116,4 +121,10 @@ body{
     top: 4%;
     left: 80%;
     transform: translate(-50%, -50%);
+  }
+
+  @media screen and (max-width:1730px) {
+      .break{
+          flex-basis: 100%;
+      }
   }

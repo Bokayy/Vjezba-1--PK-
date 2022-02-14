@@ -34,6 +34,12 @@ body header h1 {
   margin-bottom: 1rem;
 }
 
+body header .break {
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  width: 0%;
+}
+
 body header .pageIndicator {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -151,5 +157,12 @@ body main #api .item .title p {
   left: 80%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 1730px) {
+  .break {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
