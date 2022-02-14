@@ -12,6 +12,10 @@ i{
     color: black;
 }
 
+a{
+    text-decoration: none;
+}
+
 body{
     background-color: black;
 
@@ -40,6 +44,7 @@ body{
             .fa-solid{
                 font-size:5rem;
                 cursor: pointer;
+                color:white;
             }
             .pageNo{
                 font-size:3rem;
