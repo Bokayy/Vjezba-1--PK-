@@ -12,6 +12,10 @@ i {
   color: black;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   background-color: black;
 }
@@ -56,11 +60,16 @@ body header .pageIndicator {
       -ms-flex-align: center;
           align-items: center;
   margin-left: 2rem;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 body header .pageIndicator .fa-solid {
   font-size: 5rem;
   cursor: pointer;
+  color: white;
+  font-family: FontAwesome !important;
+  font-style: normal;
+  padding: 1.5rem;
 }
 
 body header .pageIndicator .pageNo {

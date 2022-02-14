@@ -41,10 +41,14 @@ body{
             flex-direction: row;
             align-items: center;
             margin-left:2rem;
+            font-family: 'Courier New', Courier, monospace;
             .fa-solid{
                 font-size:5rem;
                 cursor: pointer;
                 color:white;
+                font-family: FontAwesome !important;
+                font-style: normal;
+                padding:1.5rem;
             }
             .pageNo{
                 font-size:3rem;
