@@ -23,6 +23,13 @@ a {
   text-decoration: none;
 }
 
+.hidden {
+  pointer-events: none;
+  opacity: 0;
+  overflow: hidden;
+  width: 0;
+}
+
 body {
   background-color: black;
 }
@@ -96,6 +103,7 @@ body header .search input {
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
   height: 4rem;
+  color: black;
 }
 
 body header .search button {
@@ -106,6 +114,7 @@ body header .search button {
   border-bottom-right-radius: 3px;
   height: 4rem;
   width: 4rem;
+  cursor: pointer;
 }
 
 body .divider {
@@ -148,11 +157,16 @@ body main #api .item {
   border: 1px solid #eee;
   margin: 1rem;
   max-width: 50rem;
+  min-height: 39rem;
+  max-height: 42rem;
 }
 
 @media screen and (max-width: 940px) {
   body main #api .item p > img {
     height: 20rem;
+  }
+  body main #api .item .item:first-child {
+    margin-top: 10rem;
   }
 }
 
@@ -173,6 +187,7 @@ body main #api .item .title p {
     -webkit-box-direction: normal !important;
         -ms-flex-direction: column !important;
             flex-direction: column !important;
+    margin-bottom: 20rem !important;
   }
   #api {
     max-width: 10rem;
