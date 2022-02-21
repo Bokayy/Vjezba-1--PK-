@@ -10,8 +10,14 @@ let page = 1;
 let paginatorExists = false;
 let x = 0;
 let pageDisplay = false;
-
 const bookList = document.querySelector("#api")
+//popup
+let infoTrigger = Array();
+let item = {};
+//ISBN enumeration
+let itemISBN_enumeration = 0;
+let isbn =[];
+
 
 
 function fetchData(userinput,whatPage = 1){
@@ -26,8 +32,11 @@ fetch(`https://api.itbook.store/1.0/search/${userinput}/${whatPage}`)
     .then((data) => {
         //console.log(data);
         const html = data.books.map((data) => {
+
+            isbn[itemISBN_enumeration] = data.isbn13;
+            itemISBN_enumeration++;
+
             return  `
-            <a href="${data.url}" target="_blank">
             <div class ="item">
                 <p>
                     <img src = "${data.image}" alt="${data.title}">
@@ -41,32 +50,46 @@ fetch(`https://api.itbook.store/1.0/search/${userinput}/${whatPage}`)
                         Podnaslov: ${data.subtitle}
                     </p>
                 <br>
-                    <p>
+                    <p class="ISBN">
                         ISBN:${data.isbn13}
                     </p>
                 <br>
                     <p>
                         Cijena:${data.price}
                     </p>
-
+                <br>
+                <button class="infoTrigger" onclick="moreInfo()">
+                    More Info
+                </button>
                 </div>
-            </div>
-            </a>`;
+            </div>`;
         })
         .join("");
         document.querySelector("#api").innerHTML = html;
+        checkPage();
+    }).then(() => {
+        item = document.querySelectorAll(".item");
+        infoTrigger = document.querySelectorAll(".infoTrigger");
+        addtoev(infoTrigger,isbn);
     })
     .catch((error) => {
         console.log(error);
     });
-
 }
 
+
+function hidePagination(){
+    pageContainer.classList.add("hidden");
+}
+
+function showPagination(){
+pageContainer.classList.remove("hidden");
+}
 
 function checkPage(){
     x = bookList.children;
 
-    if(x.length ==10){
+    if(x.length == 10){
     pageDisplay = true;
     }
     else if (x.length == 0 || x.length <10){
@@ -80,13 +103,34 @@ function checkPage(){
     }
 }
 
-
-function hidePagination(){
-    pageContainer.classList.add("hidden");
-}
-
-function showPagination(){
-pageContainer.classList.remove("hidden");
+function makeSidebar(iteration,isbn){
+    console.log(iteration,isbn);
+    fetch(`https://api.itbook.store/1.0/books/${isbn[iteration]}`)
+    .then((response) => {
+        /* console.log(response); */
+        if(!response.ok) {
+            throw Error("Error");
+        }
+        return response.json();
+    })
+    .then((data) => {
+        console.log(data);
+        //IT IS AN OBJECT YOU CANNOT ITERATE THORUGH AN OBJECT WITH .map
+        const html = 
+        data.map((data) => {
+            console.log(data);
+            return  `
+                <div class="item">
+                    <p> ${data.author}
+                </div>`;
+        })
+        .join("");
+        document.querySelector("#api").innerHTML = html;
+        checkPage();
+    })
+    .catch((error) => {
+        console.log(error);
+    });
 }
 
 /* function createPagination(){
@@ -140,18 +184,19 @@ pageContainer.classList.remove("hidden");
 btn.onclick = () => 
 {
     fetchData(inputField.value);
-    checkPage();
 }
 
 inputField.addEventListener("keyup",function(e) {
-        
     if(e.keyCode === 13)
         {
             //console.log("enter");
             fetchData(inputField.value);
-            checkPage();
         }
     });
+
+function moreInfo(){
+    
+}
 //^VIEW CHANGE ---------------------------
 pagePlus.onclick = () => {
     page++;
@@ -164,3 +209,10 @@ pageMinus.onclick = () => {
     pageNo.innerHTML = `Page: ${page}`
     fetchData(inputField.value,page);
 }
+
+function addtoev(bns,isbn)
+{
+    for (let i = 0; i < bns.length; i++) {
+        bns[i].addEventListener("click", makeSidebar(i,isbn));
+         }
+    }
