@@ -156,7 +156,7 @@ body main #api .item {
   font-size: 3rem;
   border: 1px solid #eee;
   margin: 1rem;
-  max-width: 50rem;
+  max-width: 60rem;
   min-height: 39rem;
   max-height: 42rem;
 }
@@ -176,6 +176,18 @@ body main #api .item .title {
 
 body main #api .item .title p {
   font-size: 2rem;
+}
+
+body main #api .item .infoTrigger {
+  background-color: orange;
+  color: black;
+  height: 5rem;
+  width: 10rem;
+}
+
+body main #api .item .moreinfo {
+  max-width: 25rem;
+  background-color: orange;
 }
 
 @media screen and (max-width: 940px) {

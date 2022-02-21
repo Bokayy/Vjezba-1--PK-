@@ -117,11 +117,9 @@ body{
                 font-size:3rem;
                 border: 1px solid #eee;
                 margin: 1rem;
-                max-width: 50rem;
+                max-width: 60rem;
                 min-height: 39rem;
                 max-height: 42rem;
-
-                
 
                 @media screen and (max-width:940px){
                     p > img{
@@ -132,7 +130,6 @@ body{
                             margin-top:10rem;
                         }
                     }
-
                 }
 
                 .title{
@@ -140,6 +137,18 @@ body{
                     p{
                         font-size:2rem;
                     }
+                }
+
+                .infoTrigger{
+                    background-color: orange;
+                    color: black;
+                    height: 5rem;
+                    width: 10rem;
+                }
+
+                .moreinfo{
+                    max-width:25rem;
+                    background-color: orange;
                 }
             }
         }
