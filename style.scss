@@ -117,9 +117,23 @@ body{
                 font-size:3rem;
                 border: 1px solid #eee;
                 margin: 1rem;
-                max-width: 60rem;
+                max-width: 52rem;
                 min-height: 39rem;
                 max-height: 42rem;
+
+                .extra{
+                    background-color:orange;
+                    display: flex;
+                    flex-direction:row;
+                    font-size:3rem;
+                    border: 1px solid #eee;
+                    margin: -0.1rem 1rem 1rem -21.3rem;
+                    max-width: 57rem;
+                    min-width: 25rem;
+                    min-height: 42rem;
+                    max-height: 43rem;
+                    z-index:2;
+                }
 
                 @media screen and (max-width:940px){
                     p > img{
@@ -137,18 +151,6 @@ body{
                     p{
                         font-size:2rem;
                     }
-                }
-
-                .infoTrigger{
-                    background-color: orange;
-                    color: black;
-                    height: 5rem;
-                    width: 10rem;
-                }
-
-                .moreinfo{
-                    max-width:25rem;
-                    background-color: orange;
                 }
             }
         }
