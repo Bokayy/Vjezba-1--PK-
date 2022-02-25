@@ -118,7 +118,7 @@ body{
                 border: 1px solid #eee;
                 margin: 1rem;
                 max-width: 52rem;
-                min-height: 39rem;
+                min-height: 45rem;
                 max-height: 42rem;
 
                 .extra{
@@ -148,9 +148,14 @@ body{
 
                 .title{
                     margin-top:3rem;
-                    font-size: 2rem;
+                    margin-bottom: 3rem;
+                    h1{
+                        text-decoration: underline;
+                        font-size: 2rem;
+                    }
                     p{
-                        font-size:2rem;
+                        font-size:1.8rem;
+                        text-decoration: none;
                     }
                 }
             }

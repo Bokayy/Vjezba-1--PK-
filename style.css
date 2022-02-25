@@ -157,7 +157,7 @@ body main #api .item {
   border: 1px solid #eee;
   margin: 1rem;
   max-width: 52rem;
-  min-height: 39rem;
+  min-height: 45rem;
   max-height: 42rem;
 }
 
@@ -191,11 +191,17 @@ body main #api .item .extra {
 
 body main #api .item .title {
   margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+body main #api .item .title h1 {
+  text-decoration: underline;
   font-size: 2rem;
 }
 
 body main #api .item .title p {
-  font-size: 2rem;
+  font-size: 1.8rem;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 940px) {
