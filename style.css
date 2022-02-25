@@ -191,6 +191,7 @@ body main #api .item .extra {
 
 body main #api .item .title {
   margin-top: 3rem;
+  font-size: 2rem;
 }
 
 body main #api .item .title p {

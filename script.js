@@ -11,9 +11,9 @@ let page = 1;
 let pageDisplay = false;
 const bookList = document.querySelector("#api")
 
-let isbnArray = [];
+let isbnArray = function() {return this}();
 
-fetchData(inputField.value,page,isbnArray);
+console.log(fetchData());
 
 function hidePagination(){
     pageContainer.classList.add("hidden");
@@ -39,13 +39,14 @@ function checkPage(){
 //ˇVIEW CHANGE ---------------------------
 btn.onclick = () => 
 {
-    fetchData(inputField.value);
+    console.log("click");
+    fetchData();
 }
 
 inputField.addEventListener("keyup",function(e) {
     if(e.keyCode === 13)
         {
-            //console.log("enter");
+            console.log("enter");
             fetchData(inputField.value);
         }
     });
@@ -54,12 +55,14 @@ inputField.addEventListener("keyup",function(e) {
 pagePlus.onclick = () => {
     page++;
     pageNo.innerHTML = `Page: ${page}`
+    console.log("pageclick+");
     fetchData(inputField.value,page);
 }
 
 pageMinus.onclick = () => {
     page--;
     pageNo.innerHTML = `Page: ${page}`
+    console.log("pageclick-");
     fetchData(inputField.value,page);
 }
 //^PAGINATION ----------------------------

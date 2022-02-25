@@ -1,7 +1,29 @@
-function fetchData(userinput,whatPage = 1,isbnArray=[]){
+/* async function fetchData(){
+    const response = await fetch(`https://api.itbook.store/1.0/search/delphi`);
+    console.log(response);
+    const books = await response.json();
+    console.log(books);
+    console.log(books.books[0]); */
+/*     .then(function(response)
+    {
+        //console.log(response);
+        return response;
+    }
+    ).then(function(response)
+    { 
+        response => console.log(response.text());  
+    }       
+    ) 
+}*/
+
+
+
+
+
+function fetchData(userinput,whatPage = 1){
     fetch(`https://api.itbook.store/1.0/search/${userinput}/${whatPage}`)
-        .then((response) => {
-            /* console.log(response); */
+            .then((response) => {
+             console.log(response);
             if(!response.ok) {
                 throw Error("Error");
             }
@@ -10,15 +32,13 @@ function fetchData(userinput,whatPage = 1,isbnArray=[]){
         .then((data) => {
             //console.log(data);
             const html = data.books.map((book) => {
-                debugger
-                isbnArray.push(book.isbn13);
                 return  `
                 <div class ="item">
-                    <p>
+                    <p class="imageIsbnTrigger">
                         <img src = "${book.image}" alt="${book.title}">
                     </p>
                     <div class="title">
-                        <p class="imageIsbnTrigger">
+                        <p">
                             Ime knjige: ${book.title}
                         </p>
                     <br>
@@ -37,35 +57,15 @@ function fetchData(userinput,whatPage = 1,isbnArray=[]){
                     </div>
                     <div class="extra hidden"></div>
                 </div>`;
-            })/* .then((data) => {
-                console.log(data);
-                return data.books
-            }) */
-            /* .then((books) => {
-                let iterator;
-                books.foreach((book) => createExtraInfo(book,iterator),iterator++) //funkcija za kreiranje buttona, ulazni parametar book.isbn
-            }) */
-            .join("");
-            console.log(data);
+            })
+            .join("")
             document.querySelector("#api").innerHTML = html;
-            //show or don't show pagination
+            //show or hide pagination
             checkPage();
         })
-
         .catch((error) => {
             console.log(error);
         });
     }
 
-/* function createExtraInfo(book,iterator) {
-    debugger
-        console.log(book)
-        let triggerID=document.querySelectorAll(".imageIsbnTrigger")
-        id=book.isbn13;
-        triggerID[iterator].addEventListener('click', () 
-        => fetch (`https://api.itbook.store/1.0/books/${book.isbn13}`)
-        .then((book) => {
-            console.log(book);
-        }));
-    }  
- */
+
