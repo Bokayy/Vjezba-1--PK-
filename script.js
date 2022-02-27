@@ -48,6 +48,7 @@ inputField.addEventListener("keyup",function(e) {
         {
             console.log("enter");
             renderBooks(inputField.value);
+            console.log(e.currentTarget.id);
         }
     });
 
