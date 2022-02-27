@@ -27,8 +27,8 @@ async function renderBooks(userinput, whatPage=1)
 function structure(book) {
     return(
      `<div class ="item">
-    <p class="imageIsbnTrigger">
-        <img src = "${book.image}" alt="${book.title}">
+    <p>
+        <img src = "${book.image}" alt="${book.title}" class="imageIsbnTrigger">
     </p>
     <div class="title">
         <h1>
