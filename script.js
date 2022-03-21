@@ -11,9 +11,6 @@ let page = 1;
 let pageDisplay = false;
 const bookList = document.querySelector("#api")
 
-let isbnArray = function() {return this}();
-
-console.log(renderBooks());
 
 function hidePagination(){
     pageContainer.classList.add("hidden");

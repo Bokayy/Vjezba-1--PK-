@@ -26,7 +26,8 @@ async function renderBooks(userinput, whatPage=1)
     
     await books.forEach(book => 
         {
-            let htmlSegment = structure(book);html += htmlSegment;
+            let htmlSegment = structure(book);
+            html += htmlSegment;
         });
     document.querySelector("#api").innerHTML = html;
     checkPage();
